@@ -1,0 +1,38 @@
+# Виртуальное окружение
+.venv/
+venv/
+Lib/
+Scripts/
+Include/
+share/
+pyvenv.cfg
+
+# Модели в репозиторий не кладём: их скачивают по INSTALL_RU.md.
+# В папке остаётся только этот файл-подсказка.
+models/*
+!models/README.md
+*.gguf
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+pytest-of-*/
+smoke-settings.json
+
+# Сгенерированные HTML-версии документации (делаются из .md через md_to_html.py)
+README.html
+INSTALL_RU.html
+LESSON_PLAN_RU.html
+
+# Сборка приложения
+build/
+dist/
+
+# Временные каталоги pip и прочий мусор
+pip-*/
+tmp*
+wheelhouse/
+.Rhistory
+torchinductor_*

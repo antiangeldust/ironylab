@@ -1,0 +1,4 @@
+# Только для разработки: тесты и сборка приложения (.exe / .app).
+#   python -m pip install -r requirements-dev.txt
+pytest>=8,<10
+pyinstaller>=6,<7

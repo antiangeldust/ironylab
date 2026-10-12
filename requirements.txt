@@ -1,0 +1,20 @@
+# IronyLab — полный режим: семантика (эмбеддинги) + локальная LLM.
+#
+#   python -m pip install -r requirements.txt
+#
+# Ядро программы (эвристика, окно, CLI, экспорт) не требует сторонних библиотек —
+# ему хватает стандартного Python. Здесь только необязательные компоненты.
+#
+# Готовые колёса llama-cpp-python берутся из индекса ниже, поэтому компилятор
+# (Visual Studio Build Tools / Xcode) не нужен. Для NVIDIA GPU замените cpu на cu124:
+#   --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124
+--extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+
+# --- семантика: многоязычные эмбеддинги -------------------------------------
+# Тянет torch. Чтобы не скачивать CUDA-сборку torch (~2,5 ГБ), поставьте его заранее
+# с индекса CPU (см. INSTALL_RU.md, шаг 3):
+#   python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+sentence-transformers>=3.0
+
+# --- локальная LLM в формате .gguf ------------------------------------------
+llama-cpp-python>=0.3
